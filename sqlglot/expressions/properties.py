@@ -486,6 +486,10 @@ class SemanticView(Expression):
     }
 
 
+class SegmentedByProperty(Property):
+    arg_types = {"this": True, "all_nodes": False, "ksafe": False}
+
+
 class SerdeProperties(Property):
     arg_types = {"expressions": True, "with_": False}
 
@@ -580,6 +584,10 @@ class TransientProperty(Property):
 
 class UnloggedProperty(Property):
     arg_types = {}
+
+
+class UnsegmentedProperty(Property):
+    arg_types = {"all_nodes": False}
 
 
 class UsingTemplateProperty(Property):
